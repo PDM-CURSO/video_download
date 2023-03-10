@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Video App',
       home: ChangeNotifierProvider(
-        create: (context) => MyDownloadProvider()..fileExists(),
+        create: (context) => MyDownloadProvider(),
         child: HomePage(),
       ),
     );
