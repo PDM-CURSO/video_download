@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:video_downlad/providers/my_download_provider.dart';
+import 'package:video_downlad/providers/my_video_provider.dart';
+import 'package:video_downlad/video_page.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -25,7 +27,15 @@ class HomePage extends StatelessWidget {
               MaterialButton(
                 child: Text("Ver video"),
                 onPressed: () {
-                  // TODO: navegar a pag2
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => ChangeNotifierProvider(
+                        create: (context) => MyVideoProvider()
+                          ..initializeVideoPlayer(provider.videoPath!),
+                        child: VideoPage(),
+                      ),
+                    ),
+                  );
                 },
               ),
               MaterialButton(child: Text("Borrar video"), onPressed: () {}),
