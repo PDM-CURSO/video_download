@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
               MaterialButton(
                 child: Text("Descargar"),
                 onPressed: () {
-                  provider.descargarVideo();
+                  // TODO: descargar video
                 },
               ),
               MaterialButton(
@@ -38,7 +38,11 @@ class HomePage extends StatelessWidget {
                   );
                 },
               ),
-              MaterialButton(child: Text("Borrar video"), onPressed: () {}),
+              MaterialButton(
+                  child: Text("Borrar video"),
+                  onPressed: () {
+                    // TODO: removeer video de almacenamiento y BD
+                  }),
               _showText(provider),
             ],
           );

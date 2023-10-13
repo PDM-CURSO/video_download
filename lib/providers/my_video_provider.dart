@@ -15,9 +15,7 @@ class MyVideoProvider with ChangeNotifier {
       ..addListener(() => notifyListeners())
       ..setLooping(false)
       ..initialize().then((value) async {
-        // cargar el progreso del video
-        await loadConfigs();
-        notifyListeners();
+        // TODO: cargar el progreso guardado del video
       });
   }
 
@@ -30,24 +28,12 @@ class MyVideoProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  // cargar datos
-  Future<void> loadConfigs() async {
-    var _configBox = await Hive.openBox<int>("vidConfigs");
-    if (_vCont != null) {
-      int milis = _configBox.get("video_time") ?? 0;
-      Duration position = Duration(milliseconds: milis);
-      await _vCont!.seekTo(position);
-      await _vCont!.setVolume(1);
-    }
-    notifyListeners();
-  }
+  // TODO: cargar datos
+  Future<void> loadConfigs() async {}
 
-  // guardar datos
+  // TODO: guardar datos
   Future saveConfigs() async {
-    var _configBox = await Hive.openBox<int>("vidConfigs");
     try {
-      Duration position = _vCont!.value.position;
-      await _configBox.put("video_time", position.inMilliseconds);
       isSaved = true;
       notifyListeners();
     } catch (e) {
