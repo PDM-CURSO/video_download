@@ -8,12 +8,19 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons:
-  http:
-  provider:
-  video_player:
-  path_provider:
-  permission_handler:
+  # http requests
+  http: ^1.1.0
+  # state managment
+  provider: ^6.0.5
+  # video player
+  video_player: ^2.7.2
+  # Access to local storage
+  path_provider: ^2.1.1
+  # Ask for permissions
+  permission_handler: ^11.0.1
+  # NoSQL isar database management
+  isar_flutter_libs: ^3.1.0+1
+  isar: ^3.1.0+1
 
 dev_dependencies:
   flutter_test:
