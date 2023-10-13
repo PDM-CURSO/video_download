@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:video_downlad/providers/my_video_provider.dart';
@@ -51,7 +50,7 @@ class VideoPage extends StatelessWidget {
                   icon: Icon(Icons.save),
                   label: Text("Guardar"),
                   onPressed: () {
-                    provider.saveConfigs();
+                    // TODO 9: guardar preferencias
                   },
                 ),
                 MaterialButton(

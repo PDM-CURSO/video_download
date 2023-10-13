@@ -11,19 +11,19 @@ class MyDownloadProvider with ChangeNotifier {
       "https://flutter.github.io/assets-for-api-docs/assets/videos/butterfly.mp4";
 
   Future<void> descargarVideo() async {
-    // TODO: hacer el metodo para descargar video
+    // TODO 1: hacer el metodo para descargar video
   }
 
   Future<bool> _requestStoragePermission() async {
-    // TODO: hacer el metodo para solicitar acceso al almacenamiento
+    // TODO 2: hacer el metodo para solicitar acceso al almacenamiento
     return false;
   }
 
   Future<void> _saveFile(Uint8List _content) async {
-    // TODO: revisar si tenemos permiso
+    // TODO 3: revisar si tenemos permiso
 
-    // TODO: acceso al storage revisar plataformas y almacenamientos
+    // TODO 4: acceso al storage revisar plataformas y almacenamientos
 
-    // TODO: escribir archivo en almacenamiento
+    // TODO 5: escribir archivo en almacenamiento
   }
 }

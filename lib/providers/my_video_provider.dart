@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 import 'package:video_player/video_player.dart';
 
 class MyVideoProvider with ChangeNotifier {
@@ -15,7 +14,7 @@ class MyVideoProvider with ChangeNotifier {
       ..addListener(() => notifyListeners())
       ..setLooping(false)
       ..initialize().then((value) async {
-        // TODO: cargar el progreso guardado del video
+        // TODO 7: cargar el progreso guardado del video
       });
   }
 
@@ -28,10 +27,10 @@ class MyVideoProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  // TODO: cargar datos
+  // TODO 6: cargar datos
   Future<void> loadConfigs() async {}
 
-  // TODO: guardar datos
+  // TODO 10: guardar datos
   Future saveConfigs() async {
     try {
       isSaved = true;

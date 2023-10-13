@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:video_downlad/providers/my_download_provider.dart';
 
 void main() async {
+  // TODO: inicializar BD
   runApp(MyApp());
 }
 
